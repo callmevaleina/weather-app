@@ -1,0 +1,249 @@
+#root {
+  width: 100%;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+  box-sizing: border-box;
+}
+ 
+body{
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-repeat:no-repeat;
+  background-size:cover;
+  background-position:center;
+  overflow-x: hidden;
+ 
+}
+
+.App{
+  width: 100%;
+  display: flex;
+}
+
+.loader-container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  background: rgb(3, 4, 66);
+  background-size: cover;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 25px;
+  color: rgb(175, 175, 175);
+}
+
+.spinner {
+
+  width: 64px;
+  height: 64px;
+  border: 8px solid;
+  border-color: rgb(175, 175, 175) transparent rgb(175, 175, 175) transparent;
+  border-radius: 50%;
+  animation: spin-anim 1.2s linear infinite;
+}
+
+@keyframes spin-anim {
+  0% {
+      transform: rotate(0deg);
+  }
+  100% {
+      transform: rotate(360deg);
+  }
+}
+
+
+.weather-container{
+  width: 420px;
+  height: 420px;
+  background: rgba(149, 149, 149, 0.068);
+  backdrop-filter: blur(6px);
+  filter: drop-shadow(0 0 0.3rem gray);
+  border-radius: 20px;
+  display: flex;
+  margin: 0 auto;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.306);
+  color: rgb(3, 4, 66);
+  font-family: 'Open Sans', sans-serif;
+}
+
+
+.weather-header{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
+}
+.weather-header h2{
+  font-size: 30px;
+  font-weight: 300;
+  margin-bottom: 0px;
+}
+
+.temperature{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: -20px;
+}
+
+.temperature p{
+  font-size: 40px;
+  font-weight: 400;
+}
+
+.description{
+  font-size: 22px;
+  font-weight: 300;
+  margin-bottom: -20px;
+}
+
+.weather-header img{
+  width: 50%;
+  margin-bottom: 0px;
+}
+
+.weather-info{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 5px;
+  font-size: 16px;
+  margin-top: -15px;
+  color:rgb(175, 175, 175);
+}
+
+.wind-speed{
+  width: 300px;
+  height: 40px;
+  background: rgba(3, 4, 66, 0.465);
+  backdrop-filter: blur(2px);
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+
+.clouds{
+  width: 300px;
+  height: 40px;
+  background: rgba(3, 4, 66, 0.465);
+  backdrop-filter: blur(2px);
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  
+}
+
+.pressure{
+  width: 300px;
+  height: 40px;
+  background: rgba(3, 4, 66, 0.465);
+  backdrop-filter: blur(2px);
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+ 
+}
+
+.change-degrees{
+  font-size: 12px;
+  font-weight: 600;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  background: rgb(3, 4, 66);
+  color: rgb(175, 175, 175);
+  border: none;
+}
+
+.change-degrees:hover{
+  cursor: pointer;
+  background: rgb(175, 175, 175);
+  color: rgb(3, 4, 66);
+}
+
+@media (max-width: 375px) {
+  .loader-container {
+    font-size: 15px;
+  }
+  .weather-container{
+    width: 300px;
+    height: 300px;
+  }
+  .weather-header h2{
+    font-size: 22px;
+
+  }
+  .temperature{
+    margin-bottom: -30px;
+    margin-top: -10px;
+  }
+  .temperature p{
+    font-size: 32px;
+    font-weight: 400;
+  }
+  .description{
+    font-size: 18px;
+  }
+  .weather-info{
+    font-size: 13px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -20px;
+  }
+  .wind-speed{
+    width: 210px;
+    height: 30px;
+  }
+  .clouds{
+    width: 210px;
+    height: 30px;
+  }
+  .pressure{
+    width: 210px;
+    height: 30px;
+  }
+  .change-degrees{
+    font-size: 10px;
+    width: 18px;
+    height: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    background: rgb(3, 4, 66);
+    color: rgb(175, 175, 175);
+    border: none;
+  }
+  .change-degrees:hover{
+    cursor: pointer;
+    background: rgb(175, 175, 175);
+    color: rgb(3, 4, 66);
+  }
+}
