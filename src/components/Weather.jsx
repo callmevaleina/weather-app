@@ -55,7 +55,7 @@ const Weather = () => {
             <div className="temperature">
                 <p>{isCelsius ? `${parseFloat(`${weather.main?.temp-273.15}`).toFixed(2)} °C` : `${parseFloat(`${weather.main?.temp-273.15}`*1.8+32).toFixed(2)} °F`}</p>
                 <button className="change-degrees" onClick={changeFarenheit}>
-                    °C/°F
+                    <i class="fa-solid fa-repeat"></i>
                 </button>
             </div>
 
