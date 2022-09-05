@@ -168,9 +168,9 @@ body{
 }
 
 .change-degrees{
-  font-size: 12px;
+  font-size: 10px;
   font-weight: 600;
-  width: 20px;
+  width: 40px;
   height: 20px;
   display: flex;
   justify-content: center;
